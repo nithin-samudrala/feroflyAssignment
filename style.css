@@ -1,0 +1,298 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    
+}
+.topbar{
+    background-color: rgb(0,0,0);
+    /* top: 0px; */
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    padding-top: 30px;
+    /* padding-bottom: 20px; */
+    position: sticky;
+    top: 0px;
+    z-index: +1;
+    transition: all ease 0.5s;
+    
+}
+.topbar a{
+    text-decoration: none;
+    color: white;
+}
+.topbar a:hover{
+    color: rgb(256,256,256,0.5);
+}
+.header{
+    text-align: center;
+    font-family: cursive;
+    width: 80%;
+    margin-left: 10%;
+}
+#bookbtnhed{
+    border: white solid 2px;
+    color: white;
+    padding: 12px;
+    position: relative;
+    top: -13px;
+    width: 150px;
+    cursor: pointer;
+    background-color: black;
+}
+#bookbtnhed:hover{
+    color: rgb(0,0,0);
+    background-color: white;
+}
+#heding{
+    /* margin: 100px; */
+    top: 400px;
+    /* z-index: -1; */
+}
+#lines{
+    display: none;
+}
+
+.parallax1 {
+    min-height: 500px;
+    background-image: url(image.jpg);
+    background-repeat: no-repeat;
+    /* background: transparent; */
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 100px;
+}
+.parallax2 {
+    min-height: 500px;
+    background-image: url(image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /* background: transparent; */
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 100px;
+}
+/* .parallax-window{
+    height: 400px;
+} */
+.ul{
+    margin-top: 100px;
+}
+ul{
+    width: 80%;
+    margin-top: 40px;
+    margin-left: 8%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+li{
+    list-style: none;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+#datepicker{
+    /* position: relative; */
+}
+span{
+    /* position: absolute; */
+    /* top: 0px; */
+}
+.check,#Adults,#Kids{
+    border: 1px solid black;
+    padding: 5px;
+    width: 200px;
+}
+#Adults,#Kids{
+    width: 50px;
+}
+i{
+    position: relative;
+    left: -30px;
+    top: 3px;
+    z-index: 01;
+}
+#searchbtn{
+    background-color: black;
+    color: white;
+    padding: 8px;
+    width: 150px;
+    position: relative;
+    top: 12px;
+}
+#about{
+    margin-top: 100px;
+    width: 50%;
+    margin-left: 25%;
+}
+.parallax-window{
+    position: relative;
+}
+#app{
+    /* height: 100%; */
+    background-color: white;
+    /* display: flex; */
+    /* text-align: center; */
+    /* justify-content: center;
+    align-items: center; */
+    /* align-items: center;
+    justify-content: center; */
+    /* margin-top: 50%; */
+    /* transform-origin: center; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    text-align: center;
+}
+#app p{
+    padding: 20px;
+}
+#bookbtn{
+    padding: 10px;
+    color: rgb(0,0,0);
+    background-color: white;
+    border: black solid 1px;
+    width: 40%;
+}
+#bookbtn:hover{
+    background-color: black;
+    color: white;
+    
+}
+.social{
+    visibility: hidden;
+}
+@media(min-width: 713px){
+    .social{
+        visibility: visible;
+        display: flex;
+        width: 100px;
+        height: 150px;
+        background-color:white;
+        flex-direction: column;
+        /* position: sticky; */
+        position: fixed;
+        text-align: center;
+        justify-content: center;
+        top: 50%;
+        right: 0;
+    }
+
+}
+
+@media(max-width: 620px){
+    .parallax1 , .parallax2{
+        min-height: 400px;
+        /* background: transparent; */
+        width: 100%;
+        margin-left: 0;
+        margin-top: 50px;
+    }
+    #app{
+        padding: 10px;
+    }
+
+}
+
+
+@media( max-width: 712px){
+    .topbar a{
+        /* visibility: hidden; */
+        display: none;
+        /* flex-direction: column; */
+    }
+    #bookbtnhed{
+        /* float: left; */
+        left: 0px;
+    }
+    #lines{
+        display: unset;
+        position: absolute;
+        border: white solid 1px;
+        width: 50px;
+        height: 45px;
+        top: 10px;
+        right: 10px;
+        /* border-radius: 10px; */
+        
+    }
+    .line{
+        /* position: absolute; */
+
+        width: 85%;
+        height: 5px;
+        position: relative;
+        /* color: white; */
+        background: white;
+        /* text-align: center; */
+        /* top: 10px; */
+        /* z-index: 5; */
+        /* padding: 4px; */
+        left: 6%;
+        border-radius: 10px;
+        transition: all ease 0.5s;
+    }
+    #first{
+        /* margin: 10px; */
+        top: 18%;
+    }
+    #second{
+        /* padding: 10px; */
+        /* margin: 10px; */
+        top: 35%;
+    }
+    #third{
+        top: 50%;
+    }
+    .lines.close #first{
+        transform: rotate(45deg);
+        top: 40%;
+    }
+    .lines.close #second{
+        transform: rotate(-45deg);
+        top: 30%;
+    }
+    .lines.close #third{
+        /* display: none; */
+        transform: rotate(-45deg);
+        top: 20%;
+    }
+    .close.topbar{
+        transition: all ease 0.5s;
+    }
+    .close.topbar a{
+        /* visibility: hidden; */
+        /* display: unset; */
+        /* display: flex; */
+        /* display: block; */
+        /* flex-direction: column; */
+        /* width: 100%; */
+        /* text-align: center; */
+        /* position: absolute; */
+        flex-wrap: wrap;
+        justify-content: unset;
+        display: unset;
+        padding: 10px;
+    }
+    .close.topbar{
+        /* position: absolute; */
+        /* position: sticky;
+        top: 0px;
+        z-index: 10; */
+
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+    .close #bookbtnhed{
+        display: none;
+    }
+
+}

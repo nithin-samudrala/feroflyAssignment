@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="jquery-3.5.1.min.js"></script> -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!--<link rel="stylesheet" href="/resources/demos/style.css"> -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.js">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js.map"> -->
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script> -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- <script src="/parallax.js-1.5.0/parallax.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js.map"></script> -->
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+    <title>Ferofly</title>
+</head>
+<body>
+    <div class="topbar">
+        <a href="#">HOME</a>
+        <a href="#Kids">ABOUT</a>
+        <a href="#">ROOMS</a>
+        <a href="#">SERVICES</a>
+        <a href="#">GALLERS</a>
+        <a href="#">SEE&DO</a>
+        <a href="#">CONTACT</a>
+        <button disabled="disabled" id="bookbtnhed">Book A Room</button>
+        <div id='lines' class="lines">
+            <div class="line" id="first"></div>
+            <div class="line" id='second'></div>
+            <div class="line" id="third"></div>
+        </div>
+    </div>
+    <div class="header" id="heding">
+        <h1>Ferofly</h1>
+        <h3>--Magnify your journt--</h3>   
+    </div> 
+    <div class="social">
+        <i class="fa fa-tripadvisor" style="font-size:36px"></i><br>
+        <i class="fa fa-facebook" style="font-size:36px"></i><br>
+        <i class="fa fa-instagram" style="font-size:36px"></i>
+    </div>
+    <div>
+        <div class="parallax1" style="background-image: url(68184730.jpg);">
+
+        </div>
+        <!-- <div class="parallax-window" data-z-index="1" data-parallax="scroll" data-image-src="/68184730.jpg"></div> -->
+    </div>
+    <!-- <p>Date: <input type="text" id="datepicker"></p> -->
+    <div class="ul">
+        <ul>
+            
+            <li>
+                <span>Check In</span><br>
+                <input type="text" class="check i"id="datepick" onchange="myFu()" placeholder="DD MM YYYY ">
+                <i class="fa fa-calendar i" style="font-size:20px"></i>
+                
+                <!-- <div class="check datepicker"><p>DD MM YYYY</p></div> -->
+            </li>
+            
+            <li>
+                <span>Check Out</span><br>
+                <input type="text" class="check o"id="datepicker" placeholder="DD MM YYYY">
+                <i class="fa fa-calendar o" style="font-size:20px"></i>
+
+                <!-- <div class="check datepicker"><p>DD MM YYYY</p></div> -->
+            </li>
+            <li>
+                <span>Adults</span><br>
+                <input type="number" name="Adults" id="Adults" placeholder="1" min="1" >
+            </li>
+            <li>
+                <span>Kids</span><br>
+                <input type="number" name="Kids" id="Kids" placeholder="0" min="0" >
+            </li>
+            <li>
+                <button type="button" id="searchbtn">Search</button>
+            </li>
+
+    </ul>
+    <div class="header" id="about">
+        <h1>ABOUT</h1>
+        <p>I'm a paragraph. Click here to add your own text and edit me. 
+            It’s easy. Just click “Edit Text” or double click me to add your own content and make changes 
+            to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place 
+            for you to tell a story and let your users know a little more about you.​
+        </p>
+    </div>
+    <div class="parallax2" >
+    <!-- <div class="parallax-window" data-parallax="scroll" data-image-src="/image.jpg"> -->
+        <div id="app">
+            <h4>OUR ROOMS</h4>
+            <p>I'm a paragraph. Click here to add your own text and edit me. 
+                I’m a great place for you to tell a story and let your users know a little more about you.
+            </p>
+            <button disabled="disabled" id="bookbtn">Book a Room</button>
+
+            
+        </div>
+    </div>
+
+    </div>
+    
+        
+    <script>
+    $("[type='number']").keypress(function (evt) {
+        evt.preventDefault();
+    });
+    // $(".check").keypress(function (evt) {
+    //     evt.preventDefault();
+    // });
+    document.getElementsByClassName('fa fa-calendar')[0].addEventListener("click", function(){
+        document.getElementById('datepick').focus();
+    });
+    document.getElementsByClassName('fa fa-calendar')[1].addEventListener("click", function(){
+        document.getElementById('datepicker').focus();
+    });
+    // function myFu(){
+    //     document.getElementById('datepicker').focus();
+    // }
+    // myFu=() =>document.getElementsByClassName('fa fa-calendar')[1].click()
+    // document.getElementById('datepick').addEventListener("focusout", function(){
+    //     document.getElementById('datepicker').focus();
+    // });
+    $( function() {
+        $( ".check" ).datepicker();
+    } );
+    $('#lines').click(function(){
+        $('.lines').toggleClass('close')
+        $('.topbar').toggleClass('close')
+
+    })
+    
+    
+    </script>
+</body>
+</html>
